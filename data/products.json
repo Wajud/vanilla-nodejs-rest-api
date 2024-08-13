@@ -1,0 +1,27 @@
+[
+   {"id": "1",
+   "name": "Airpods wireless Bluetooth Headphones",
+   "description" : "Bluetooth technology allowing you to connect your mobile phone to your earpiece. Music listening redefined",
+   "price" : 89.99
+},
+   {"id": "2",
+   "name": "iiphone 11 Pro 256GB Memory",
+   "description" : "Introducing iPhone 11 Pro with transformative camera system",
+   "price": 500
+},
+   {"id": "3",
+   "name": "Samsung TV",
+   "description" : "Television allowing you connect to your mobile phones and also use USB drives",
+   "price": 100
+},
+   {"id": "4",
+   "name": "Micra Speaker",
+   "description" : "Crazy bass sound system",
+   "price": 120
+},
+   {"id": "5",
+   "name": "Extension box",
+   "description" : "Get sufficient space to plug your electric appliances safely",
+   "price": 40
+}
+]
