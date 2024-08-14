@@ -29,4 +29,28 @@ async function getProduct(req, res, id) {
   }
 }
 
-module.exports = { getProducts, getProduct };
+//create a product
+//route /api/products
+const createProduct = async (req, res) => {
+  try {
+    let body = "";
+    req.on("data", (chunk) => {
+      body += chunk.toString();
+    });
+    req.on("end", async () => {
+      const { title, description, price } = JSON.parse(body);
+      const product = {
+        title,
+        description,
+        price,
+      };
+      const newProduct = await Product.create(product);
+      res.writeHead(201, { "Content-Type": "application/json" });
+      res.end(JSON.stringify(newProduct));
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+module.exports = { getProducts, getProduct, createProduct };
