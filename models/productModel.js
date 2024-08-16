@@ -33,4 +33,13 @@ function update(id, product) {
   });
 }
 
-module.exports = { findAll, findById, create, update };
+function remove(id) {
+  return new Promise((resolve, reject) => {
+    const index = products.findIndex((prod) => prod.id === id);
+    products.splice(index, 1);
+    writeDataToFile("./data/products.json", products);
+    resolve("Product Successfully Deleted");
+  });
+}
+
+module.exports = { findAll, findById, create, update, remove };
